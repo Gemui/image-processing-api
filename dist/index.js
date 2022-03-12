@@ -9,8 +9,8 @@ var apicache_1 = __importDefault(require("apicache"));
 var cache = apicache_1.default.middleware;
 var app = (0, express_1.default)();
 app.use(cache('5 minutes'));
+app.use('/api/images', images_1.default);
 app.listen(3000, function () {
     console.log("logging into: http://localhost:3000");
 });
-app.use('/api/images', images_1.default);
 exports.default = app;

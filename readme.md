@@ -1,6 +1,6 @@
 ## Image Api
 
-Add your images inside assets\images\full and take advantage of image processing  
+Add your images inside assets\images\full and take advantage of image processing api for (Resize - Rotate - Save to disk for multiple choice)
 
 ## extension support 
 JPEG, PNG, WebP, GIF
@@ -29,6 +29,8 @@ node ./dist
 | width         | Optional  | 200               |
 | height        | Optional  | 200               |
 | rotate        | Optional  | 90                |
+
+### width and height should be togther
 
 ## test
 

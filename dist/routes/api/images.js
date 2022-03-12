@@ -44,12 +44,12 @@ var imageMiddleware_1 = __importDefault(require("../../utilities/imageMiddleware
 var handleImageData_1 = __importDefault(require("../../utilities/handleImageData"));
 var router = (0, express_1.default)();
 router.get('/', imageMiddleware_1.default, function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
-    var handleImageData, imageResponse, newImagePath, error_1;
+    var handleImageData, newImagePath, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
                 handleImageData = new handleImageData_1.default(req.query);
-                imageResponse = handleImageData.findOrCreateImage();
+                handleImageData.findOrCreateImage();
                 _a.label = 1;
             case 1:
                 _a.trys.push([1, 3, , 4]);
@@ -60,11 +60,9 @@ router.get('/', imageMiddleware_1.default, function (req, res) { return __awaite
                 return [3 /*break*/, 4];
             case 3:
                 error_1 = _a.sent();
-                res.send("invalid image name");
+                res.send('invalid image name');
                 return [3 /*break*/, 4];
-            case 4:
-                ;
-                return [2 /*return*/];
+            case 4: return [2 /*return*/];
         }
     });
 }); });

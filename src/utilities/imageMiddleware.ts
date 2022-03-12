@@ -1,14 +1,16 @@
-import express  from "express";
+import express from 'express';
 
-const imageMiddleware = (req: express.Request, res: express.Response, next : Function) => {
-    if (req.query.filename) {
-         next();
-         return;
-    }
+const imageMiddleware = (
+  req: express.Request,
+  res: express.Response,
+  next: express.NextFunction
+) => {
+  if (req.query.filename) {
+    next();
+    return;
+  }
 
-    res.send('File name is required');
-
-}
-
+  res.send('File name is required');
+};
 
 export default imageMiddleware;
