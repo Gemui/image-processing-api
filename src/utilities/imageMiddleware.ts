@@ -2,7 +2,8 @@ import express  from "express";
 
 const imageMiddleware = (req: express.Request, res: express.Response, next : Function) => {
     if (req.query.filename) {
-       return  next();
+         next();
+         return;
     }
 
     res.send('File name is required');
