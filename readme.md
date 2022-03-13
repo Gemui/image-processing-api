@@ -5,6 +5,9 @@ Add your images inside assets\images\full and take advantage of image processing
 ## extension support 
 JPEG, PNG, WebP, GIF
 
+## Requirements
+ Node.js >= 12.13.0 
+ 
 ## Installation
 
 ```shell
