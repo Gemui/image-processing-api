@@ -51,7 +51,7 @@ describe('Test image endpoint  responses', function () {
                 case 1:
                     response = _a.sent();
                     expect(response.status).toBe(200);
-                    expect(response.text).toEqual('File name is required');
+                    expect(response.text).toEqual('File name is required, exmaple ?filename=encenadaport.jpg');
                     return [2 /*return*/];
             }
         });
@@ -63,7 +63,7 @@ describe('Test image endpoint  responses', function () {
                 case 0: return [4 /*yield*/, request.get('/api/images/?filename=invalid-image-name.jpg')];
                 case 1:
                     response = _a.sent();
-                    expect(response.text).toEqual('invalid image name');
+                    expect(response.text).toEqual('Invalid input for filename');
                     return [2 /*return*/];
             }
         });

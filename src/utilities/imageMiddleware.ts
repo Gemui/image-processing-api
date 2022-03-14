@@ -10,7 +10,7 @@ const imageMiddleware = (
     return;
   }
 
-  res.send('File name is required');
+  res.send('File name is required, exmaple filename=encenadaport');
 };
 
 export default imageMiddleware;

@@ -35,11 +35,8 @@ class HandleImageData {
     let imageBuffer: Buffer;
     try {
       imageBuffer = await fs.readFile(newImagePath);
-
-      console.log('Logging : read-from-save');
     } catch (error) {
       imageBuffer = await this.file.toBuffer();
-      console.log('Logging : create-new-file');
     }
 
     await fs.writeFile(newImagePath, imageBuffer);

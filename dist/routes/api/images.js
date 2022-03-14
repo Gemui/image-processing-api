@@ -41,9 +41,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var express_1 = __importDefault(require("express"));
 var imageMiddleware_1 = __importDefault(require("../../utilities/imageMiddleware"));
+var imageQueryMiddleware_1 = __importDefault(require("../../utilities/imageQueryMiddleware"));
 var handleImageData_1 = __importDefault(require("../../utilities/handleImageData"));
 var router = (0, express_1.default)();
-router.get('/', imageMiddleware_1.default, function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
+router.get('/', imageMiddleware_1.default, imageQueryMiddleware_1.default, function (req, res) { return __awaiter(void 0, void 0, void 0, function () {
     var handleImageData, newImagePath, error_1;
     return __generator(this, function (_a) {
         switch (_a.label) {
@@ -60,7 +61,7 @@ router.get('/', imageMiddleware_1.default, function (req, res) { return __awaite
                 return [3 /*break*/, 4];
             case 3:
                 error_1 = _a.sent();
-                res.send('invalid image name');
+                res.send("Invalid input for filename");
                 return [3 /*break*/, 4];
             case 4: return [2 /*return*/];
         }

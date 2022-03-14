@@ -70,14 +70,12 @@ var HandleImageData = /** @class */ (function () {
                         return [4 /*yield*/, fs_1.promises.readFile(newImagePath)];
                     case 2:
                         imageBuffer = _a.sent();
-                        console.log('Logging : read-from-save');
                         return [3 /*break*/, 5];
                     case 3:
                         error_1 = _a.sent();
                         return [4 /*yield*/, this.file.toBuffer()];
                     case 4:
                         imageBuffer = _a.sent();
-                        console.log('Logging : create-new-file');
                         return [3 /*break*/, 5];
                     case 5: return [4 /*yield*/, fs_1.promises.writeFile(newImagePath, imageBuffer)];
                     case 6:

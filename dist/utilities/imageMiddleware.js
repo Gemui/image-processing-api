@@ -5,6 +5,6 @@ var imageMiddleware = function (req, res, next) {
         next();
         return;
     }
-    res.send('File name is required');
+    res.send('File name is required, exmaple ?filename=encenadaport.jpg');
 };
 exports.default = imageMiddleware;
