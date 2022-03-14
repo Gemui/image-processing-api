@@ -4,7 +4,7 @@ const imageQueryMiddleware = (
   req: express.Request,
   res: express.Response,
   next: express.NextFunction
-) => {
+): void => {
   if (req.query.width && req.query.height) {
     const width = Number(req.query.width);
     const height = Number(req.query.height);
